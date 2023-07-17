@@ -342,6 +342,9 @@ nav #name {
     #createMain #form {
         margin-top: 5vh;
     }
+    #createMain #form .labelDeleteDiv button {
+        width: 20vw;
+    }
 }
 
 /* Quiz Main Stuff */
