@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <title>Quiz Maker</title>
+        <link rel="icon" type="image/x-icon" href="media/quizMakerLogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" id="logoLink"><img id="logo" src="media/quizMakerLogo.png"></a>
+            <a href="index.html" id="name">Quiz Maker</a>
+            <div id="rightSideDiv">
+                <a href="index.html">Home</a>
+                <a href="create.html">Create</a>
+            </div>  
+        </nav>
+        <div id="navBuffer">
+        </div>
+        <main id="createMain">
+            <button id="finishQuizButton" onclick="finishQuiz()">Finish Quiz</button>
+            <div id="form">
+                <input id="titleInput" type="text" placeholder="untitled quiz">
+                <div id="inputSection">
+                    <div class="labelDeleteDiv" id="labelDeleteDiv1">
+                        <label for="questionInput1" id="label1">Question 1</label>
+                    </div>
+                    <textarea rows="5" id="questionInput1" type="text" placeholder="question here"></textarea>
+                    <textarea rows="5" id="answerInput1" type="text" placeholder="answer here"></textarea>
+                </div>
+            </div>
+            <button id="newQuestionButton" onclick="newQuestion()">New Question</button>
+        </main>
+        <footer>
+            <p>Created By: Seán Osborne :)</p>
+            <p>Started: 24 June 2023</p>
+            <p>Finished: Working Version - 27 June 2023</p>
+            <p>Added: Edit Page - 3 July 2023</p>
+        </footer>
+    </body>
+</html>
+<script src="create.js"></script>

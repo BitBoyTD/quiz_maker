@@ -1,0 +1,583 @@
+/* fonts */
+@font-face {
+    font-family: "nunito";
+    src: url(media/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "robotoSlab";
+    src: url(media/RobotoSlab-VariableFont_wght.ttf);
+}
+
+/* colours */
+:root {
+    --black: #222831;
+    --grey: #393E46;
+    --blue: #00ADB5;
+    --white: #EEEEEE;
+}
+
+/* Entire Page Stuff */
+body, html {
+    font-family: "nunito";
+    background: var(--grey);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+html {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+button {
+    transition: background 0.5s;
+}
+textarea {
+    resize: none;
+}
+button, textarea, input {
+    font-family: "nunito";
+}
+p, textarea, button, input {
+    font-size: 1rem;
+}
+h1, a {
+    font-family: "robotoSlab";
+}
+#indexMain button {
+    font-size: 2rem;
+}
+
+/* Nav Bar Stuff */
+nav {
+    z-index: 9;
+    background: var(--black);
+    backdrop-filter: blur(100px);
+    position:fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    opacity: 90%;
+    
+}
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    margin: 0 1rem 0 0;
+    transition: color 0.5s;
+}
+nav a:hover {
+    color: var(--blue);
+}
+nav #logo {
+    height: 6vh;
+}
+nav #logoLink {
+    margin-left: 1rem;
+    height: 6vh;
+}
+nav #name {
+    margin-right: 2rem;
+}
+
+#navBuffer {
+    height: 7vh;
+    width: 100vw;
+}
+
+/* nav bar media queries */
+@media screen and (max-width: 767px) {
+    nav #rightSideDiv {
+        position: absolute;
+        right: 1rem;
+    }
+    nav {
+        height: 7vh;
+    }
+    #navBuffer {
+        height: 7vh;
+    }
+}
+
+/* Index Main Section Stuff */
+#indexMain {
+    height: auto;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#indexMain button {
+    border-radius: 1rem;
+    background: var(--black);
+    border: none;
+    height: 20vw;
+    width: 20vw;
+    margin: 2.5vw;
+    color: var(--white);
+    transition: background 0.5s;
+}
+#indexMain button:hover {
+    background: var(--blue);
+}
+#indexMain div {
+    height: 20vw;
+    width: 20vw;
+    position: relative;
+    display: grid;
+}
+#indexMain div .moreButton {
+    font-size: 1rem;
+    height: auto;
+    width: auto;
+    margin: none;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem 0 0 0;
+    background: none;
+}
+#indexMain div .moreButton:hover {
+    background: none;
+}
+#indexMain div .moreButtonImg {
+    width: 2vw;
+    height: 2vw;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) hue-rotate(0deg);
+    transition: filter 0.5s;
+}
+#indexMain div .moreButtonImg:hover {
+    filter: brightness(100%) saturate(100%) invert(0%) sepia(0%) hue-rotate(0deg);
+}
+#indexMain div .moreButtonsDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    height: 40%;
+    width: 35%;
+    display: none;
+}
+#indexMain div .moreButtonsDiv button {
+    background: var(--grey);
+    border: none;
+    height: 40%;
+    width: 100%;
+    color: var(--white);
+    transition: background 0.5s;
+    font-size: 1rem;
+    margin: 0;
+}
+#indexMain div .moreButtonsDiv button:hover {
+    background: var(--blue);
+}
+#indexMain div .moreButtonsDiv .deleteButton {
+    border-radius:0;
+}
+#indexMain div .moreButtonsDiv .editButton {
+    border-radius: 1rem 1rem 0 0;
+}
+#indexMain div .moreButtonsDiv .closeButton {
+    border-radius: 0 0 1rem 1rem;
+}
+
+/* index main media query */
+@media screen and (max-width: 767px) {
+    #indexMain {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+    #indexMain button {
+        height: 45vw;
+        width: 45vw;
+    }
+    #indexMain div .moreButtonImg {
+        width: 5vw;
+        height: 5vw;
+    }
+    #indexMain div .moreButtonsDiv {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* Create Main Section Stuff */
+#createMain {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+#createMain #newQuestionButton {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0.5vh;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 1rem;
+    background: var(--black);
+}
+#createMain #newQuestionButton:hover {
+    background: var(--blue);
+}
+#createMain #form {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+#createMain #form #titleInput {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    height: 3vh;
+    width: 13vw; 
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 1rem;
+    margin-left: 0.5vw;
+    margin-top: 5vh;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+}
+#createMain #form #titleInput:focus {
+    outline: solid var(--blue) 0.2rem;
+}
+#createMain #form #quizTitleSection input:focus {
+    outline: solid var(--blue) 0.2rem;
+}
+#createMain #form label {
+    color: var(--white);
+    margin: 0.5vh;
+}
+#createMain #finishQuizButton {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    margin-top: 5vh;
+    position: absolute;
+    right: 10vw;
+    top: 10vh;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 1rem;
+}
+#createMain #finishQuizButton:hover {
+    background: var(--blue);
+}
+#createMain #form #inputSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+#createMain #form .labelDeleteDiv button {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0.5vh;
+    width: 5vw;
+    height: 5vh;
+    border-radius: 1rem;
+    background: var(--black);
+}
+#createMain #form .labelDeleteDiv button:hover {
+    background: var(--blue);
+}
+#createMain #form #inputSection textarea {
+    background: var(--black);
+    border: none;
+    height: 8vw;
+    width: 18vw;
+    padding: 1vh 1vw 1vh 1vw; 
+    border-radius: 1rem;
+    margin: 0.5vh;
+    color: var(--white);
+}
+#createMain #form #inputSection textarea:focus {
+    outline: solid 0.2rem var(--blue);
+}
+
+/* create main media query */
+@media screen and (max-width:767px) {
+    #createMain #form #inputSection {
+        margin-top: 5vh;
+    }
+    #createMain #form #inputSection textarea {
+        height: 23vw;
+        width: 88vw;
+    }
+    #createMain #newQuestionButton {
+        width: 90vw;
+        height: 5vh;
+        margin-bottom: 40vh;
+    }
+    #createMain #finishQuizButton {
+        right: 5vw;
+        width: 30vw;
+        margin: 0;
+    }
+    #createMain #form #titleInput {
+        width: 28vw; 
+        left: 5vw;
+        margin: 0;
+    }
+    #createMain #form {
+        margin-top: 5vh;
+    }
+}
+
+/* Quiz Main Stuff */
+#quizMain {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quizMain #resultDisplay {
+    color: var(--blue);
+}
+#quizMain #submitButton {
+    margin: 0.5vh;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    height: 5vh;
+    width: 20vw;
+    border-radius: 1rem;
+}
+#quizMain #submitButton:hover {
+    background: var(--blue);
+}
+#quizMain #titleDisplay {
+    color: var(--blue);
+}
+#quizMain form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quizMain form label {
+    color: var(--white);
+    margin: 0.5vh;
+}
+#quizMain form textarea, p {
+    background: var(--black);
+    border: none;
+    height: 8vw;
+    width: 18vw;
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 1rem;
+    margin: 0.5vh;
+    color: var(--white);
+    outline: none;
+}
+#quizMain form textarea:focus {
+    outline: solid var(--blue) 0.2rem;
+}
+#quizMain #resultDisplay {
+    display: none;
+    font-family: "robotoSlab";
+}
+#quizMain #restartButton {
+    display: none;
+    margin: 0.5vh;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    height: 5vh;
+    width: 20vw;
+    border-radius: 1rem;
+}
+#quizMain #restartButton:hover {
+    background: var(--blue);
+}
+#quizMain #homeButton {
+    display: none;
+    margin: 0.5vh;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    height: 5vh;
+    width: 20vw;
+    border-radius: 1rem;
+}
+#quizMain #homeButton:hover {
+    background: var(--blue);
+}
+
+/* quiz main media query */
+@media screen and (max-width: 767px) {
+    #quizMain form textarea, p {
+        height: 23vw;
+        width: 88vw;
+    }
+    #quizMain #submitButton {
+        width: 90vw;
+    }
+    #quizMain #restartButton {
+        width: 90vw;
+    }
+    #quizMain #homeButton {
+        width: 90vw;
+    }
+}
+
+/* edit main section */
+#editMain {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+#editMain #titleInput {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    height: 3vh;
+    width: 13vw; 
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 1rem;
+    margin-left: 0.5vw;
+    margin-top: 5vh;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+}
+#editMain #titleInput:focus {
+    outline: solid var(--blue) 0.2rem;
+}
+#editMain #finishQuizButton {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    margin-top: 5vh;
+    position: absolute;
+    right: 10vw;
+    top: 10vh;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 1rem;
+}
+#editMain #finishQuizButton:hover {
+    background: var(--blue);
+}
+#editMain #newQuestionButton {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0.5vh;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 1rem;
+    background: var(--black);
+}
+#editMain #newQuestionButton:hover {
+    background: var(--blue);
+}
+#editMain #form {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+#editMain #form .labelDeleteDiv label{
+    color: var(--white);
+    margin: 0.5vh;
+}
+#editMain #form .labelDeleteDiv button {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0.5vh;
+    width: 5vw;
+    height: 5vh;
+    border-radius: 1rem;
+    background: var(--black);
+}
+#editMain #form .labelDeleteDiv button:hover {
+    background: var(--blue);
+}
+#editMain #form label {
+    color: var(--white);
+    margin: 0.5vh;
+}
+#editMain #form textarea {
+    background: var(--black);
+    border: none;
+    height: 8vw;
+    width: 18vw;
+    padding: 1vh 1vw 1vh 1vw; 
+    border-radius: 1rem;
+    margin: 0.5vh;
+    color: var(--white);
+}
+#editMain #form textarea:focus {
+    outline: solid var(--blue) 0.2rem;
+}
+
+/* edit main media query */
+@media screen and (max-width: 767px) {
+    #editMain #form textarea {
+        height: 23vw;
+        width: 88vw;
+    }
+    #editMain #form {
+        margin-top: 10vh;
+    }
+    #editMain #newQuestionButton {
+        width: 90vw;
+        margin-bottom: 40vh;
+    }
+    #editMain #form .labelDeleteDiv button {
+        width: 20vw;
+    }
+    #editMain #finishQuizButton {
+        right: 5vw;
+        width: 30vw;
+        margin: 0;
+    }
+    #editMain #titleInput {
+        width: 28vw; 
+        left: 5vw;
+        margin: 0;
+    }
+}
+
+/* Footer Section Stuff */
+footer {
+    margin-top: 0.5vh;
+    background: var(--black);
+    display:flex;
+    height: 16vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer p {
+    margin: 0;
+    color: var(--grey);
+    padding: 0;
+    background: none;
+    height: auto;
+    width: auto;
+}
