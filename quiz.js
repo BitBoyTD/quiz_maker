@@ -90,8 +90,12 @@ function submitButton() {
         const submitButton = document.getElementById("submitButton");
         submitButton.style.display = "none";
         /* display buttons */
+        const answerButton = document.getElementById("answerButton");
+        answerButton.style.display = "block";
         const restartButton = document.getElementById("restartButton");
         restartButton.style.display = "block";
+        const editButton = document.getElementById("editButton");
+        editButton.style.display = "block";
         const homeButton = document.getElementById("homeButton");
         homeButton.style.display = "block";
 
@@ -105,6 +109,19 @@ const restartButton = () => {
 
 const homeButton = () => {
     window.location.href = "index.html";
+}
+
+// answer button function
+function answerButton() {
+    for (i=1; i<= questionCount; i++) {
+        let answer = selectedQuiz[i].answer;
+        let answerInput = document.getElementById("answerInput"+i);
+        answerInput.innerHTML = answer;
+    }
+}
+
+const editButton = () => {
+    window.location.href = "edit.html";
 }
   
   

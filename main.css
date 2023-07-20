@@ -425,6 +425,32 @@ nav #name {
 #quizMain #homeButton:hover {
     background: var(--blue);
 }
+#quizMain #answerButton {
+    display: none;
+    margin: 0.5vh;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    height: 5vh;
+    width: 20vw;
+    border-radius: 1rem;
+}
+#quizMain #answerButton:hover {
+    background: var(--blue);
+}
+#quizMain #editButton {
+    display: none;
+    margin: 0.5vh;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    height: 5vh;
+    width: 20vw;
+    border-radius: 1rem;
+}
+#quizMain #editButton:hover {
+    background: var(--blue);
+}
 
 /* quiz main media query */
 @media screen and (max-width: 767px) {
@@ -439,6 +465,12 @@ nav #name {
         width: 90vw;
     }
     #quizMain #homeButton {
+        width: 90vw;
+    }
+    #quizMain #answerButton {
+        width: 90vw;
+    }
+    #quizMain #editButton {
         width: 90vw;
     }
 }
