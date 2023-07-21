@@ -108,15 +108,15 @@ function answerButton() {
     for (i=1; i<= questionCount; i++) {
         let answer = selectedQuiz[i].answer;
         let answerInput = document.getElementById("answerInput"+i);
-        answerInput.innerHTML = answer;
+        let userAnswer = answerInput.value;
+        let lowerUserAnswer = userAnswer.toLowerCase();
+        let lowerAnswer = answer.toLowerCase();
+        if (lowerAnswer !== lowerUserAnswer) {
+            answerInput.value = userAnswer + "\n\n" + answer;
+        }
     }
 }
 
 const editButton = () => {
     window.location.href = "edit.html";
 }
-  
-  
-
-
-
