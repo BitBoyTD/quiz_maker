@@ -63,7 +63,7 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 7vh;
+    height: 10vh;
     width: 100vw;
     opacity: 90%;
     
@@ -89,7 +89,7 @@ nav #name {
 }
 
 #navBuffer {
-    height: 7vh;
+    height: 10vh;
     width: 100vw;
 }
 
