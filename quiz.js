@@ -96,20 +96,12 @@ function submitButton() {
         restartButton.style.display = "block";
         const editButton = document.getElementById("editButton");
         editButton.style.display = "block";
-        const homeButton = document.getElementById("homeButton");
-        homeButton.style.display = "block";
-
-
     }
 }
 
 const restartButton = () => {
     window.location.reload();
 };
-
-const homeButton = () => {
-    window.location.href = "index.html";
-}
 
 // answer button function
 function answerButton() {

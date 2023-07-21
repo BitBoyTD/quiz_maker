@@ -412,19 +412,6 @@ nav #name {
 #quizMain #restartButton:hover {
     background: var(--blue);
 }
-#quizMain #homeButton {
-    display: none;
-    margin: 0.5vh;
-    border: none;
-    background-color: var(--black);
-    color: var(--white);
-    height: 5vh;
-    width: 20vw;
-    border-radius: 1rem;
-}
-#quizMain #homeButton:hover {
-    background: var(--blue);
-}
 #quizMain #answerButton {
     display: none;
     margin: 0.5vh;
@@ -462,9 +449,6 @@ nav #name {
         width: 90vw;
     }
     #quizMain #restartButton {
-        width: 90vw;
-    }
-    #quizMain #homeButton {
         width: 90vw;
     }
     #quizMain #answerButton {
