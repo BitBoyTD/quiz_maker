@@ -6,6 +6,8 @@ let finalArray = [];
     
 /* new question button function */
 function newQuestion() {
+    // little thing
+    document.getElementById("newQuestionButton").style.outline = "none";
     /* update question counter */
     questionCounter += 1;
     /* set id values */
@@ -110,7 +112,9 @@ function finishQuiz() {
 
 /* delete button function */
 function deleteButton(questionNumber) {
-    if (questionNumber === questionCounter) {
+    if (questionCounter === 1) {
+        document.getElementById("newQuestionButton").style.outline = "solid red 0.2rem";
+    } else if (questionNumber === questionCounter) {
         // Lower the question counter
         questionCounter -= 1;
 
@@ -152,12 +156,12 @@ function deleteButton(questionNumber) {
                 let answer = document.getElementById("answerInput" + i);
                 question.remove();
                 answer.remove();
+                let deleteButton = document.getElementById("deleteButton" + i);
+                deleteButton.remove();
                 let label = document.getElementById("label" + i);
                 label.remove();
                 let labelDeleteDiv = document.getElementById("labelDeleteDiv" + i);
                 labelDeleteDiv.remove();
-                let deleteButton = document.getElementById("deleteButton" + i);
-                deleteButton.remove();
             }
         }
 
