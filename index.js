@@ -115,3 +115,14 @@ function deleteButton(quizTitle) {
         }
     }
 }
+
+
+// variables we'll need 
+let clickCount = 0;
+// logo button function 
+function logoButton() {
+    clickCount += 1;
+    if (clickCount === 69) {
+        document.getElementById("devOptDiv").style.display = "flex";
+    }
+}

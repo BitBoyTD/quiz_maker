@@ -8,7 +8,7 @@
     </head>
     <body>
         <nav>
-            <a href="index.html" id="logoLink"><img id="logo" src="media/quizMakerLogo.png"></a>
+            <button id="logoButton" onclick="logoButton()"><img id="logo" src="media/quizMakerLogo.png"></button>
             <a href="index.html" id="name">Quiz Maker</a>
             <div id="rightSideDiv">
                 <a href="index.html">Home</a>
@@ -26,6 +26,34 @@
             <p>Finished: Working Version - 27 June 2023</p>
             <p>Added: Edit Page - 3 July 2023</p>
         </footer>
+        <div id="devOptDiv">
+            <h1>Developer Options</h1>
+            <div class="optionDiv">
+                <h2>Light Mode</h2>
+                <div class="onOffDiv">
+                    <button id="on1">On</button>
+                    <button id="off1">Off</button>
+                </div>
+            </div>
+            <div class="optionDiv">
+                <h2>Nate Mode</h2>
+                <div class="onOffDiv">
+                    <button id="on2">On</button>
+                    <button id="off2">Off</button>
+                </div>
+            </div>
+            <div class="optionDiv">
+                <h2>Boyd Mode</h2>
+                <div class="onOffDiv">
+                    <button id="on3">On</button>
+                    <button id="off3">Off</button>
+                </div>
+            </div>
+            <div class="optionDiv">
+                <h2>Update Log</h2>
+                <button id="updateLogButton">Open</button>
+            </div>
+        </div>
     </body>
 </html>
 <script src="index.js"></script>
