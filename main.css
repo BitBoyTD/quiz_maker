@@ -121,80 +121,6 @@ nav #name {
     }
 }
 
-/* Developer Options Stuff */
-#devOptDiv {
-    background: var(--grey);
-    position: fixed;
-    top: 15vh;
-    height: 70vh;
-    left: 15vw;
-    width: 70vw;
-    display: none;
-    border-radius: 1rem;
-    z-index: 10;
-    display: none;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: 1fr;
-}
-#devOptDiv h1 {
-    color: var(--blue);
-    text-align: center;
-}
-#devOptDiv .optionDiv {
-    display: flex;
-    margin: 0.5rem;
-    flex-direction: row;
-    background: var(--black);
-    border-radius: 1rem;
-    justify-content: space-between;
-    align-items: center;
-}
-#devOptDiv .optionDiv h2 {
-    color: var(--white);
-    font-weight: normal;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-}
-#devOptDiv .optionDiv .onOffDiv {
-    display: flex;
-    flex-direction: row;
-    background: var(--black);
-    border-radius: 1rem;
-    align-items: center;
-    height: 100%;
-    width: auto;
-}
-#devOptDiv .optionDiv #updateLogButton {
-    border-radius: 1rem;
-    background: var(--black);
-    border: none;
-    color: var(--white);
-    transition: background 0.5s;
-    height: 80%;
-    width: 10vw;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-#devOptDiv .optionDiv #updateLogButton:hover {
-    background: var(--blue);
-}
-#devOptDiv .optionDiv .onOffDiv button {
-    border-radius: 1rem;
-    background: var(--black);
-    border: none;
-    color: var(--white);
-    transition: background 0.5s;
-    height: 80%;
-    width: 10vw;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-#devOptDiv .optionDiv .onOffDiv button:hover {
-    background: var(--blue);
-}
-
 /* Index Main Section Stuff */
 #indexMain {
     height: auto;
@@ -688,4 +614,32 @@ footer p {
     background: none;
     height: auto;
     width: auto;
+}
+
+/* logs page styles */
+#logsMain {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-around;
+}
+#logsMain .logDiv {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    background: var(--black);
+    border-radius: 1rem;
+    align-items: center;
+}
+#logsMain .logDiv h2 {
+    color: var(--white);
+    margin: 1rem;
+    font-weight:normal;
+}
+#logsMain .logDiv h2 .blue {
+    color: var(--blue);
+    font-family:'robotoSlab';
 }

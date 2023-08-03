@@ -123,6 +123,6 @@ let clickCount = 0;
 function logoButton() {
     clickCount += 1;
     if (clickCount === 69) {
-        document.getElementById("devOptDiv").style.display = "flex";
+        window.location.href = "logs.html";
     }
 }
