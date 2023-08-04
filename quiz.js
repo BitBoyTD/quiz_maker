@@ -103,16 +103,22 @@ const restartButton = () => {
     window.location.reload();
 };
 
+
+// variables we'll need
+let answerButtonClickCount = 0;
 // answer button function
 function answerButton() {
-    for (i=1; i<= questionCount; i++) {
-        let answer = selectedQuiz[i].answer;
-        let answerInput = document.getElementById("answerInput"+i);
-        let userAnswer = answerInput.value;
-        let lowerUserAnswer = userAnswer.toLowerCase();
-        let lowerAnswer = answer.toLowerCase();
-        if (lowerAnswer !== lowerUserAnswer) {
-            answerInput.value = userAnswer + "\n\n" + answer;
+    answerButtonClickCount += 1;
+    if (answerButtonClickCount < 2) {
+        for (i=1; i<= questionCount; i++) {
+            let answer = selectedQuiz[i].answer;
+            let answerInput = document.getElementById("answerInput"+i);
+            let userAnswer = answerInput.value;
+            let lowerUserAnswer = userAnswer.toLowerCase();
+            let lowerAnswer = answer.toLowerCase();
+            if (lowerAnswer !== lowerUserAnswer) {
+                answerInput.value = userAnswer + "\n\n" + answer;
+            }
         }
     }
 }
